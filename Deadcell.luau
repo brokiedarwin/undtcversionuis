@@ -26,7 +26,7 @@ for i,v in next, images do
     if not isfile(settings.folder_name..'/assets/'..i..'.png') then
         writefile(settings.folder_name..'/assets/'..i..'.png', game:HttpGet(v))
     end
-    images[i] = getcustomasset(readfile(settings.folder_name..'/assets/'..i..'.png'))
+    images[i] = getcustomasset(settings.folder_name..'/assets/'..i..'.png')
 end
 
 local services = setmetatable({}, {
