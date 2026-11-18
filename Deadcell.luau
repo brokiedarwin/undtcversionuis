@@ -23,8 +23,8 @@ local images = {
 }
 for i,v in next, images do
     if v == "" then continue end
-    if not isfile(settings.folder_name..'/assets/'..i..'.ln') then
-        writefile(settings.folder_name..'/assets/'..i..'.ln', game:HttpGet(v))
+    if not isfile(settings.folder_name..'/assets/'..i..'.png') then
+        writefile(settings.folder_name..'/assets/'..i..'.png', game:HttpGet(v))
     end
     images[i] = readfile(settings.folder_name..'/assets/'..i..'.png')
 end
