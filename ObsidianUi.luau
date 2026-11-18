@@ -21,7 +21,7 @@ end
 
 local LocalPlayer = Players.LocalPlayer
 local Mouse = Vector2.new() -- orinal code dont use Vector2 it used GetMouse and sinc rivals dected it then we will change it
-UserInput.InputChanged:Connect(function(input)
+UserInputService.InputChanged:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
         Mouse = input.Position
 	end
